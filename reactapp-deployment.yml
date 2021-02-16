@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: react-app2
-          image: hisbu/reactapp-test:tagVersion
+          image: hisbu/reactapp-test2:tagVersion
           ports: 
             - containerPort: 80
 
@@ -28,12 +28,11 @@ kind: Service
 metadata:
   name: react-app2-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     name: react-app2
   ports:
     - port: 3000
       targetPort: 80
-      nodePort: 30010
     
     
