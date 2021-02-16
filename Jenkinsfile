@@ -12,16 +12,16 @@ pipeline {
         sh 'npm install'
       }
     }
-    // stage('Test project'){
-    //   steps {
-    //     sh './jenkins/scripts/test.sh'
-    //   }
-    // }
-    // stage('Build Project react'){
-    //   steps{
-    //     sh 'npm run build'
-    //   }
-    // }
+    stage('Test project'){
+      steps {
+        sh './jenkins/scripts/test.sh'
+      }
+    }
+    stage('Build Project react'){
+      steps{
+        sh 'npm run build'
+      }
+    }
     // stage ('Build Docker Image'){
     //   steps {
     //     script {
